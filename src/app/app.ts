@@ -1,12 +1,22 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Header } from './header/header';
+import { User } from './user/user';
+import { USERS } from './users.data';
 
 @Component({
-  imports: [RouterOutlet],
   selector: 'app-root',
-  styleUrl: './app.css',
+  imports: [Header, User],
   templateUrl: './app.html',
+  styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('lesson1');
+  users = USERS;
+
+  // הקופסה שזוכרת את השם שנלחץ. מתחילה ריקה.
+  selectedName = signal('');
+
+  // נקראת כשהילד מדווח. name הוא מה שנשלח ב-emit
+  onUserSelected(name: string) {
+    this.selectedName.set(name);
+  }
 }

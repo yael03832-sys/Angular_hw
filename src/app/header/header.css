@@ -1,0 +1,34 @@
+.header {
+    display: flex;
+    /* מסדר את הילדים בשורה אחת, זה לצד זה */
+    align-items: center;
+    /* ממרכז אנכית את הלוגו והטקסט */
+    gap: 16px;
+    /* רווח בין הלוגו לטקסט */
+    padding: 16px 24px;
+    /* ריווח פנימי מהקצוות */
+    background-color: #1e3a5f;
+    color: white;
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    /* הופך את התמונה לעיגול */
+    object-fit: cover;
+    /* מונע מתיחה של התמונה */
+}
+
+.texts h1 {
+    margin: 0;
+    /* מבטל רווח ברירת מחדל של הכותרת */
+    font-size: 28px;
+}
+
+.description {
+    margin: 4px 0 0 0;
+    font-size: 15px;
+    opacity: 0.85;
+    /* מעט שקוף, כדי שייראה משני לכותרת */
+}

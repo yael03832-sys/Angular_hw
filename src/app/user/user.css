@@ -1,0 +1,16 @@
+.avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    /* זה מה שיוצר עיגול */
+    object-fit: cover;
+    /* התמונה לא נמתחת, אלא נחתכת יפה */
+}
+
+.user-card {
+    cursor: pointer;
+    /* האצבע מופיעה כשעוברים עם העכבר */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
